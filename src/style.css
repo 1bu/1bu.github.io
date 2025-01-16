@@ -1,0 +1,340 @@
+@font-face {
+    font-family: 'Ubuntu Condensed';
+    src: url('./assets/font/UbuntuCondensed-Regular.ttf') format('truetype');
+}
+
+body{
+    font-size: 100%;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+/*NAVBAR*/
+
+#nav{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 5rem;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 1px, rgba(0, 0, 0, 0.07) 0px 2px 2px, rgba(0, 0, 0, 0.07) 0px 4px 4px, rgba(0, 0, 0, 0.07) 0px 8px 8px, rgba(0, 0, 0, 0.07) 0px 16px 16px;
+    z-index: 2;
+    border-bottom: 4px solid #A3B18A;
+}
+
+.nav-btn{
+    border: none;
+    font-weight: 600;
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 1rem;
+    background-color: transparent;
+    color: #9C6644;
+
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+}
+
+.nav-btn:hover{
+    cursor: pointer;
+    color:#4B3832;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+/* HERO */
+
+.hero{
+    width: 100%;
+    height: auto;
+    margin: auto;
+}
+
+/*MENU*/
+.menuSection{
+    margin: .5rem;
+}
+
+.menuSection h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color:#4B3832;
+    text-transform: uppercase;
+}
+
+.menuSection h3{
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    color:#9C6644;
+    text-decoration: underline;
+}
+
+.menuExample{
+    /*
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    justify-content: center;
+    margin: 3rem 0;
+    */
+    display: grid;
+    grid-template-columns: 50% 50%; 
+    grid-template-rows: auto auto;
+    gap: 10px;
+    width: 100%; 
+    justify-items: center;
+}
+
+.menu-example{
+    width: 10rem;
+    height: 10rem;
+    overflow: hidden; 
+    border-radius: 10px; 
+    background-color: #4B3832;
+    border: 1px solid #9C6644; 
+}
+
+.menu-example img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    object-position: top; 
+}
+
+/*Carousel */
+
+.carousel{
+    overflow: hidden;
+    max-width: 100%;
+    height: 80vh;
+    position: relative;
+    padding-top: .5rem;
+}
+
+.carousel .carousel-item,
+.carousel .carousel-item-hidden{
+    display: none;
+}
+
+.carousel .carousel-item img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.carousel .carousel-item-active{
+    display: block;
+}
+
+.carousel .carousel-actions{
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.carousel .carousel-actions button{
+    border-radius: 5px;
+    border: none;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    margin: 1rem;
+}
+
+.carousel .carousel-actions button:hover{
+    background-color: #A3B18A;
+    color: #4B3832;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1); 
+}
+
+.carousel .carousel-actions button#carousel-btn-prev{
+    margin-left: 20px;
+}
+
+.carousel .carousel-actions button#carousel-btn-next{
+    margin-right: 20px;
+}
+
+/*Location*/
+.location h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color:#4B3832;
+    text-transform: uppercase;
+}
+
+.location p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color:#9C6644;
+}
+
+/*MENU PAGE*/
+
+.menu {
+    display: grid;
+    /*grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));*/
+    gap: 20px; 
+    padding: 20px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+/* Sections */
+.menu > div {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.menu > div:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+}
+
+.menu-item {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    text-align: center;
+    max-width: 200px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    width: 150px;
+    height: 150px; 
+    background-color: #ccc;
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+  }
+  
+  .menu-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+/* Titles */
+.hotBeveragesSection h2, .coldBeveragesSection h2, .pressedSub h2, .dessert h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+    color: #4B3832; 
+}
+
+.hotBeveragesSection h3, .coldBeveragesSection h3, .pressedSub h3, .dessert h3 {
+    font-size: 1.5rem;
+    margin: 10px 0 5px 0;
+    color: #9C6644;
+}
+
+/* Text */
+.hotBeveragesSection p, .coldBeveragesSection p, .pressedSub p, .dessert p {
+    font-size: 1rem;
+    color: #9C6644;
+    line-height: 1.5;
+}
+
+/* Responsividad */
+@media (max-width: 600px) {
+    .menu-container {
+        grid-template-columns: 1fr; 
+    }
+}
+
+/*ABOUT*/
+
+.about {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+/* Sección de la imagen */
+.aboutSection {
+    flex: 1;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.about p{
+    color: #9C6644;
+    font-size: 1rem;
+}
+
+.aboutSection img {
+    width: 100%;
+    height: 50vh;
+    opacity: .5;
+}
+  
+  /* Sección de texto */
+.aboutText {
+    flex: 1.5;
+}
+  
+  /* Sección de contacto */
+.contactSection {
+    flex: 1;
+    text-align: center;
+}
+
+.contactSection h2{
+    font-size: 2rem;
+    letter-spacing: 1px;
+    color:#4B3832;
+    text-transform: uppercase;
+}
+
+.contactSection p{
+    font-size: 1rem;
+    letter-spacing: 1px;
+    color:#9C6644;
+}
+
+  /* Formulario de contacto */
+  
+  /* Título de contacto */
+.contactTitle {
+    margin-bottom: 10px;
+}
+  
+  /* Elementos de contacto */
+.contactEmail, .contactMedia {
+    margin-bottom: 5px;
+}
+  
+  /* Redes sociales */
+.socialMedia {
+    display: flex;
+    justify-content: space-evenly;
+}
+  
+  /* Iconos de redes sociales */
+.media {
+    width: 2rem;
+    height: 2rem;
+    text-align: center;
+    cursor: pointer;
+}
+
+.media:hover{
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+}
